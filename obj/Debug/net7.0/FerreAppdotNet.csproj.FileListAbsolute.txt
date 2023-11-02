@@ -1,0 +1,14 @@
+C:\Users\APM02-36\Documents\cs\FerreAppdotNet\bin\Debug\net7.0\FerreAppdotNet.exe
+C:\Users\APM02-36\Documents\cs\FerreAppdotNet\bin\Debug\net7.0\FerreAppdotNet.deps.json
+C:\Users\APM02-36\Documents\cs\FerreAppdotNet\bin\Debug\net7.0\FerreAppdotNet.runtimeconfig.json
+C:\Users\APM02-36\Documents\cs\FerreAppdotNet\bin\Debug\net7.0\FerreAppdotNet.dll
+C:\Users\APM02-36\Documents\cs\FerreAppdotNet\bin\Debug\net7.0\FerreAppdotNet.pdb
+C:\Users\APM02-36\Documents\cs\FerreAppdotNet\obj\Debug\net7.0\FerreAppdotNet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\APM02-36\Documents\cs\FerreAppdotNet\obj\Debug\net7.0\FerreAppdotNet.AssemblyInfoInputs.cache
+C:\Users\APM02-36\Documents\cs\FerreAppdotNet\obj\Debug\net7.0\FerreAppdotNet.AssemblyInfo.cs
+C:\Users\APM02-36\Documents\cs\FerreAppdotNet\obj\Debug\net7.0\FerreAppdotNet.csproj.CoreCompileInputs.cache
+C:\Users\APM02-36\Documents\cs\FerreAppdotNet\obj\Debug\net7.0\FerreAppdotNet.dll
+C:\Users\APM02-36\Documents\cs\FerreAppdotNet\obj\Debug\net7.0\refint\FerreAppdotNet.dll
+C:\Users\APM02-36\Documents\cs\FerreAppdotNet\obj\Debug\net7.0\FerreAppdotNet.pdb
+C:\Users\APM02-36\Documents\cs\FerreAppdotNet\obj\Debug\net7.0\FerreAppdotNet.genruntimeconfig.cache
+C:\Users\APM02-36\Documents\cs\FerreAppdotNet\obj\Debug\net7.0\ref\FerreAppdotNet.dll
