@@ -9,17 +9,17 @@ internal class Program
             Console.Clear();
 
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("╔════════════════════════════════════╗");
-            Console.WriteLine("║     UNICA Hardware Store           ║");
-            Console.WriteLine("╠════════════════════════════════════╣");
-            Console.WriteLine("║  1. List Inventory Products        ║");
-            Console.WriteLine("║  2. List Products To Be Finished   ║");
-            Console.WriteLine("║  3. List Inventory Products        ║");
-            Console.WriteLine("║  4. List Inventory Products        ║");
-            Console.WriteLine("║  5. List Inventory Products        ║");
-            Console.WriteLine("║  6. List Inventory Products        ║");
-            Console.WriteLine("║  7. Salir                          ║");
-            Console.WriteLine("╚════════════════════════════════════╝");
+            Console.WriteLine("╔════════════════════════════════════════════════════╗");
+            Console.WriteLine("║     UNICA Hardware Store                           ║");
+            Console.WriteLine("╠════════════════════════════════════════════════════╣");
+            Console.WriteLine("║  1. Show Inventory Products                        ║");
+            Console.WriteLine("║  2. Show Products To Be Finished                   ║");
+            Console.WriteLine("║  3. Show Products To Be Purchased And Quantitty    ║");
+            Console.WriteLine("║  4. Show Total Bills                               ║");
+            Console.WriteLine("║  5. List Inventory Products                        ║");
+            Console.WriteLine("║  6. List Inventory Products                        ║");
+            Console.WriteLine("║  7. Salir                                          ║");
+            Console.WriteLine("╚════════════════════════════════════════════════════╝");
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("\nPor favor, elige una opción: ");
@@ -43,8 +43,15 @@ internal class Program
                 case "3":
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.WriteLine("Has seleccionado la Opción 3. Presiona Enter para continuar.");
-                    Console.ResetColor();
+                    Methods methods2 = new Methods();
+                    methods2.ProductsToBePurchased();
+                    Console.ReadLine();
+                    break;
+                case "4":
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Methods methods3 = new Methods();
+                    methods3.TotalBillsFromJanuary();
                     Console.ReadLine();
                     break;
                 case "7":

@@ -11,6 +11,8 @@ namespace FerreAppdotNet.Config
         static EntitiesList entitiesList = new();
         static List<Products> products = entitiesList._products;
         static List<Client> clients = entitiesList._clients;
+        static List<Bill> bills = entitiesList._bills;
+        static List<BillDetails> billDetails = entitiesList._billsDetails;
 
         public void ShowProducts()
         {
@@ -31,6 +33,34 @@ namespace FerreAppdotNet.Config
                                         select p).ToList();
 
             productsToBeFinished.ForEach(p => Console.WriteLine($"- {p.Name}"));             
+        }
+
+        public void ProductsToBePurchased()
+        {
+            Console.WriteLine("Products to be Purchased");
+            Console.WriteLine("------------------------");
+            var productsToBePurchased = (from p in products
+                                         where p.Quantity < p.StockMin
+                                         select p).ToList();
+
+            foreach (var item in productsToBePurchased)
+            {
+                Console.WriteLine($"- {item.Name} - Quantity to be purchased: {item.StockMax - item.Quantity}");
+            }
+        }
+
+        public void TotalBillsFromJanuary()
+        {
+            Console.WriteLine("Total Bills from January");
+            Console.WriteLine("------------------------");
+            var totalBillsFromJanuary = (from b in bills
+                                         where b.Date.Month == 01
+                                         select b).ToList();
+
+            foreach (var item in totalBillsFromJanuary)
+            {
+                Console.WriteLine($"- {item.BillNum} - {item.Date} - {item.ClientId} - {item.TotalBill}");
+            }
         }
 
     }
