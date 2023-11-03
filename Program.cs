@@ -42,16 +42,30 @@ internal class Program
                     break;
                 case "3":
                     Console.Clear();
-                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Methods methods2 = new Methods();
                     methods2.ProductsToBePurchased();
                     Console.ReadLine();
                     break;
                 case "4":
                     Console.Clear();
-                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.ForegroundColor = ConsoleColor.Magenta;
                     Methods methods3 = new Methods();
                     methods3.TotalBillsFromJanuary();
+                    Console.ReadLine();
+                    break;
+                case "5":
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Methods methods4 = new Methods();
+                    methods4.ProductsSoldOnAGivenBill();
+                    Console.ReadLine();
+                    break;
+                case "6":
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.DarkBlue;
+                    Methods methods5 = new Methods();
+                    methods5.TotalValueOfInventory();
                     Console.ReadLine();
                     break;
                 case "7":

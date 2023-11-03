@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\corvus\\.nuget\\packages\\": {}
+    "C:\\Users\\APM02-36\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\corvus\\Documents\\DeLxCruz\\cs\\FerreAppdotNet\\FerreAppdotNet.csproj",
+      "projectUniqueName": "C:\\Users\\APM02-36\\Documents\\cs\\FerreAppdotNet\\FerreAppdotNet.csproj",
       "projectName": "FerreAppdotNet",
-      "projectPath": "C:\\Users\\corvus\\Documents\\DeLxCruz\\cs\\FerreAppdotNet\\FerreAppdotNet.csproj",
-      "packagesPath": "C:\\Users\\corvus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\corvus\\Documents\\DeLxCruz\\cs\\FerreAppdotNet\\obj\\",
+      "projectPath": "C:\\Users\\APM02-36\\Documents\\cs\\FerreAppdotNet\\FerreAppdotNet.csproj",
+      "packagesPath": "C:\\Users\\APM02-36\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\APM02-36\\Documents\\cs\\FerreAppdotNet\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\corvus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\APM02-36\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
