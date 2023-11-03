@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "NsPeMqdhgif8bgp+5wGFrDUHee1BFXLMwSOloyf3Y7knnGVY4YzzvHZ8MVGGtRmGU04X8mGTd7eDBpGaQTWopA==",
+  "dgSpecHash": "iiQAIRqYPeosJtp4Hv1b2xC6JRiU2X2u5xLBuZQeNa3aKziNn8rrHHrKcAh0slAN5TTXDSqYYb3/QS+jXWP/XA==",
   "success": true,
   "projectFilePath": "C:\\Users\\APM02-36\\Documents\\cs\\FerreAppdotNet\\FerreAppdotNet.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\APM02-36\\.nuget\\packages\\betterconsoletables\\1.1.3\\betterconsoletables.1.1.3.nupkg.sha512",
     "C:\\Users\\APM02-36\\.nuget\\packages\\consoletables\\2.6.1\\consoletables.2.6.1.nupkg.sha512"
   ],
   "logs": []

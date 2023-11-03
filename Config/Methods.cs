@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 using FerreAppdotNet.Classes;
+using BetterConsoleTables;
 
 namespace FerreAppdotNet.Config
 {
@@ -16,60 +18,79 @@ namespace FerreAppdotNet.Config
 
         public void ShowProducts()
         {
-            Console.WriteLine("Products");
-            Console.WriteLine("--------");
+            Console.WriteLine("Inventory Products");
+            Console.WriteLine("══════════════════");
+            var table = new Table("Name", "Unit Price", "Quantity");
+
             foreach (var item in products)
             {
-                Console.WriteLine($"Name Product: {item.Name}");
+                table.AddRow(item.Name, item.UnitPrice, item.Quantity);
             }
+            table.Config = TableConfiguration.UnicodeAlt();
+            Console.WriteLine(table.ToString());
         }
 
         public void ShowProductsToBeFinished()
         {
-            Console.WriteLine("Products to be Finished");
-            Console.WriteLine("----------------------");
+            Console.WriteLine("Products to be finished");
+            Console.WriteLine("═══════════════════════");
+            var table = new Table("Name");
+
             var productsToBeFinished = (from p in products
                                         where p.Quantity < p.StockMin
                                         select p).ToList();
 
-            productsToBeFinished.ForEach(p => Console.WriteLine($"- {p.Name}"));             
+            productsToBeFinished.ForEach(p => table.AddRow(p.Name));
+            table.Config = TableConfiguration.UnicodeAlt();
+            Console.WriteLine(table.ToString());             
         }
 
         public void ProductsToBePurchased()
         {
             Console.WriteLine("Products to be Purchased");
-            Console.WriteLine("------------------------");
+            Console.WriteLine("════════════════════════");
+            var table = new Table("Name", "Quantity to be purchased");
+
             var productsToBePurchased = (from p in products
                                          where p.Quantity < p.StockMin
                                          select p).ToList();
 
             foreach (var item in productsToBePurchased)
             {
-                Console.WriteLine($"- {item.Name} - Quantity to be purchased: {item.StockMax - item.Quantity}");
+                table.AddRow(item.Name, item.StockMax - item.Quantity);
             }
+            table.Config = TableConfiguration.UnicodeAlt();
+            Console.WriteLine(table.ToString());
         }
 
         public void TotalBillsFromJanuary()
         {
             Console.WriteLine("Total Bills from January");
-            Console.WriteLine("------------------------");
+            Console.WriteLine("════════════════════════");
+            var table = new Table("BillNum", "Date", "ClientId", "Total Bill");
+
             var totalBillsFromJanuary = (from b in bills
                                          where b.Date.Month == 01 && b.Date.Year == 2023
                                          select b).ToList();
 
             foreach (var item in totalBillsFromJanuary)
             {
-                Console.WriteLine($"- BillNum: {item.BillNum} - Date: {item.Date} - ClientId: {item.ClientId} - Total Bill: {item.TotalBill}");
+                table.AddRow(item.BillNum, item.Date, item.ClientId, item.TotalBill);
             }
+            table.Config = TableConfiguration.UnicodeAlt();
+            Console.WriteLine(table.ToString());
         }
 
 
         public void ProductsSoldOnAGivenBill ()
         {
             Console.WriteLine("Products sold on a given bill");
-            Console.WriteLine("----------------------------");
+            Console.WriteLine("═════════════════════════════");
             Console.WriteLine("Enter the bill number: ");
             int billNumber = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+
+            var table = new Table("Name", "BillNum", "Quantity", "Value");
 
             if (billNumber > 0)
             {
@@ -80,8 +101,10 @@ namespace FerreAppdotNet.Config
 
                 foreach (var item in productsSoldOnAGivenBill)
                 {
-                    Console.WriteLine($" - Product Name: {item.Name} -BillNum: {item.BillNum} - Quantity: {item.Quantity} - Value: {item.Value}");
+                    table.AddRow(item.Name, item.BillNum, item.Quantity, item.Value);
                 }
+                table.Config = TableConfiguration.UnicodeAlt();
+                Console.WriteLine(table.ToString());
             }
             else
             {
@@ -91,12 +114,14 @@ namespace FerreAppdotNet.Config
 
         public void TotalValueOfInventory ()
         {
-            Console.WriteLine("Total value of inventory");
-            Console.WriteLine("------------------------");
+            var table = new Table("Total value of inventory: ");
+
             var totalValueOfInventory = (from p in products
                                          select p.UnitPrice * p.Quantity).Sum();
 
-            Console.WriteLine($"Total value of inventory: {totalValueOfInventory}");
+            table.AddRow(totalValueOfInventory);
+            table.Config = TableConfiguration.UnicodeAlt();
+            Console.WriteLine(table.ToString());
         }
     }
 }

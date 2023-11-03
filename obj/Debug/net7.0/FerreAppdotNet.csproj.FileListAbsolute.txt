@@ -26,3 +26,7 @@ C:\Users\corvus\Documents\DeLxCruz\cs\FerreAppdotNet\obj\Debug\net7.0\refint\Fer
 C:\Users\corvus\Documents\DeLxCruz\cs\FerreAppdotNet\obj\Debug\net7.0\FerreAppdotNet.pdb
 C:\Users\corvus\Documents\DeLxCruz\cs\FerreAppdotNet\obj\Debug\net7.0\FerreAppdotNet.genruntimeconfig.cache
 C:\Users\corvus\Documents\DeLxCruz\cs\FerreAppdotNet\obj\Debug\net7.0\ref\FerreAppdotNet.dll
+C:\Users\APM02-36\Documents\cs\FerreAppdotNet\bin\Debug\net7.0\ConsoleTables.dll
+C:\Users\APM02-36\Documents\cs\FerreAppdotNet\obj\Debug\net7.0\FerreAppdotNet.csproj.AssemblyReference.cache
+C:\Users\APM02-36\Documents\cs\FerreAppdotNet\obj\Debug\net7.0\FerreAppdotNet.csproj.CopyComplete
+C:\Users\APM02-36\Documents\cs\FerreAppdotNet\bin\Debug\net7.0\BetterConsoleTables.dll
